@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://urbansky.com/
+host: https://urbansky.com
+notes: >-
+  urbansky.com sits behind a WAF that returns 403 for non-existent paths
+  (real pages return 200). No /.well-known/ discovery documents were found.
+  The site does publish /llms.txt (captured verbatim in llms/urban-sky-llms.txt).
+documents:
+  - path: /.well-known/security.txt
+    status: 403
+  - path: /security.txt
+    status: 403
+  - path: /.well-known/openid-configuration
+    status: 403
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+  - path: /.well-known/api-catalog
+    status: 403
+  - path: /.well-known/ai-plugin.json
+    status: 403
+  - path: /llms.txt
+    status: 200
+    file: ../llms/urban-sky-llms.txt

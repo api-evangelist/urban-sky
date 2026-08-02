@@ -1,0 +1,84 @@
+# Urban Sky - llms.txt
+
+> Urban Sky is the global leader in tactical stratospheric balloon technology, providing persistent aerial surveillance, communications relay, and data collection solutions for defense, commercial, and scientific applications.
+
+## Company Overview
+
+Urban Sky, founded in 2016 and headquartered in Denver, Colorado, develops and manufactures reusable stratospheric microballoons that operate at altitudes up to 75,000 feet. The company has raised $30M in Series B funding and holds 20+ patents in stratospheric balloon technology.
+
+## Key Products
+
+### Microballoon Systems
+- Reusable stratospheric balloons available in 10, 12, and 16 gore configurations
+- Payload capacity: 4-50 lbs depending on configuration
+- Float altitude: 61,000 - 75,000 feet
+- Launch time: Under 5 minutes
+- Multi-day flight duration
+
+### Wallabee Payload Platform
+- Modular, interchangeable sensor payloads
+- Supports EO/IR cameras, LWIR thermal imaging, communications relay equipment
+- 10cm resolution optical imagery capability
+- Real-time data streaming
+
+### Software Platform
+- Mission planning and flight control
+- Real-time tracking and telemetry
+- Automated data processing
+- Fleet management capabilities
+
+## Market Solutions
+
+### Defense & Intelligence
+- Persistent ISR (Intelligence, Surveillance, Reconnaissance)
+- Rapid tactical deployment in contested environments
+- Communications relay and mesh networking
+- Multi-day loitering capability
+- SIGINT and EW payload support
+
+### Commercial & Data
+- Wildfire detection and monitoring
+- Infrastructure inspection
+- Agricultural analysis
+- Environmental monitoring
+- Disaster response support
+- High-resolution mapping
+
+### Science & Weather
+- Atmospheric research and sampling
+- Weather data collection
+- Climate monitoring
+- Near-space experimentation
+- University research partnerships
+
+## Key Differentiators
+
+1. First and only reusable stratospheric balloon system
+2. 5-minute rapid deployment capability
+3. Payload-agnostic modular design
+4. Made in Denver, USA
+5. 20+ patents protecting core technology
+6. Multi-day persistent flight duration
+
+## Contact
+
+- Website: https://urbansky.com
+- Email: info@urbansky.com
+- Phone: +1 (844) 286-6797
+- Address: 4800 Race Street, Denver, Colorado 80216, USA
+- LinkedIn: https://www.linkedin.com/company/urban-sky-strato
+
+## Pages
+
+- Home: https://urbansky.com/
+- Defense Solutions: https://urbansky.com/solutions/defense
+- Commercial Solutions: https://urbansky.com/solutions/commercial
+- Science Solutions: https://urbansky.com/solutions/science
+- Microballoon Technology: https://urbansky.com/technology/microballoon
+- Systems & Specs: https://urbansky.com/technology/systems
+- Software Platform: https://urbansky.com/technology/software
+- Data Products: https://urbansky.com/technology/data
+- About Us: https://urbansky.com/company/about
+- News: https://urbansky.com/news
+- Careers: https://urbansky.com/careers
+- Contact: https://urbansky.com/contact

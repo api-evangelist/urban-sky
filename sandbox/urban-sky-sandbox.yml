@@ -1,0 +1,22 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbansky.com/guide/getting-started.html
+notes: >-
+  Urban Sky publishes a live test endpoint developers can call to verify their
+  SDK integration: POSTing to it injects a test balloon update that is then
+  delivered to the caller's connected SDK listener via the real-time feed.
+  There is no separate sandbox environment or test-key prefix documented; the
+  test endpoint uses the production API token.
+test_endpoints:
+  - name: Send test balloon update
+    method: POST
+    url: https://api.ops.atmosys.com/sdk/test/balloon
+    auth: x-api-token header (organization API token)
+    content_type: application/json
+    body: '{}'
+    behavior: >-
+      Sends a test balloon:update message that the caller receives through
+      their connected SDK listener, verifying end-to-end data flow.
+    docs:
+      - https://docs.urbansky.com/guide/getting-started.html
+      - https://docs.urbansky.com/api/javascript.html

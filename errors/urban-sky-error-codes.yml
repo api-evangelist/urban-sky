@@ -1,0 +1,60 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbansky.com/guide/error-handling.html
+format: sdk-error-codes
+envelope:
+  sdk:
+    description: SDKError objects delivered on the SDK 'error' event
+    fields: [code, message, details]
+  rest:
+    description: >-
+      JSON error envelope observed live on api.ops.atmosys.com (NestJS-style),
+      e.g. GET / returns 404 with this shape.
+    fields: [statusCode, timestamp, path, method, message, details]
+    example:
+      statusCode: 404
+      timestamp: '2026-07-21T18:13:34.650Z'
+      path: /
+      method: GET
+      message: Cannot GET /
+errors:
+  - code: INVALID_TOKEN
+    title: API token is invalid
+    remediation: Check token with Urban Sky support
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: AUTHENTICATION_FAILED
+    title: Authentication failed
+    remediation: Verify credentials; contact support
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: CONNECTION_LOST
+    title: Connection to server lost
+    remediation: SDK handles automatic reconnection
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: NETWORK_ERROR
+    title: Network connectivity issue
+    remediation: Check internet connection
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: TIMEOUT
+    title: Operation timed out
+    remediation: Retry the operation
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: RATE_LIMITED
+    title: Rate limit exceeded
+    remediation: Wait before retrying
+    source: https://docs.urbansky.com/guide/error-handling.html
+  - code: AUTH_INVALID_TOKEN
+    title: API token is invalid or expired
+    remediation: Check your API token
+    source: https://docs.urbansky.com/api/javascript.html
+  - code: AUTH_INSUFFICIENT_PERMISSIONS
+    title: Token lacks SDK permissions
+    remediation: Request SDK permissions from Urban Sky support
+    source: https://docs.urbansky.com/api/javascript.html
+  - code: CONNECTION_FAILED
+    title: Connection to server failed
+    remediation: Check network connectivity and retry
+    source: https://docs.urbansky.com/api/javascript.html
+  - code: SERVICE_UNAVAILABLE
+    title: Urban Sky service temporarily unavailable
+    remediation: Retry later
+    source: https://docs.urbansky.com/api/javascript.html

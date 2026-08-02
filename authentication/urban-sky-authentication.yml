@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+docs: https://docs.urbansky.com/guide/getting-started.html
+source: https://docs.urbansky.com/guide/getting-started.html
+notes: >-
+  No self-serve sign-up: API tokens are issued by contacting Urban Sky support
+  with organization details and delivered via secure email. Tokens are scoped
+  to the organization and grant access to that organization's balloon data.
+  Docs instruct server-side use only (never client-side, never committed to
+  version control). The SDK is initialized with the token (apiToken) and the
+  REST test endpoint takes it in the x-api-token header.
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+schemes:
+  - name: apiToken
+    type: apiKey
+    in: header
+    parameter: x-api-token
+    description: >-
+      Organization-scoped Urban Sky API token. Passed as apiToken to
+      UrbanSkySDK.init() for the WebSocket telemetry feed, and as the
+      x-api-token header on REST calls to https://api.ops.atmosys.com.
+    issuance: Contact Urban Sky support (support@atmosys.com); token delivered via secure email
+    sources:
+      - https://docs.urbansky.com/guide/getting-started.html
+      - https://docs.urbansky.com/api/javascript.html

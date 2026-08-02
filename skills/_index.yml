@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+skills:
+  - file: urban-sky-ai-assistant-guide.md
+    name: Urban Sky AI Assistant Guide (provider-published prompts)
+    method: searched
+    source: https://docs.urbansky.com/guide/ai-prompt.html
+    api: https://docs.urbansky.com/
+    operations: [UrbanSkySDK.init, "sdk.on('balloon:update')"]
+  - file: urban-sky-receive-balloon-telemetry.md
+    name: Receive real-time balloon telemetry from Urban Sky
+    method: generated
+    source: https://docs.urbansky.com/guide/getting-started.html
+    api: https://docs.urbansky.com/
+    operations: [UrbanSkySDK.init, "sdk.on('balloon:update')", "sdk.on('unassigned:devices')", "POST /sdk/test/balloon"]

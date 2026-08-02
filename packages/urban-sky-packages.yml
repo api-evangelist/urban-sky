@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbansky.com/guide/getting-started.html
+notes: >-
+  Urban Sky distributes its SDKs via a CDN loader system on sdk.atmosys.com
+  (Atmosys is Urban Sky's software platform brand; docs.atmosys.com serves the
+  same Urban Sky SDK documentation). The docs state npm packages for JavaScript
+  and pip packages for Python may be offered in the future; neither registry
+  carries a first-party package today. Both loader URLs verified live (HTTP 200)
+  on 2026-07-21.
+packages:
+  - language: javascript
+    registry: cdn
+    name: Urban Sky JavaScript SDK
+    url: https://sdk.atmosys.com/runtime/js/current/loader.js
+    install: "const response = await fetch('https://sdk.atmosys.com/runtime/js/current/loader.js'); eval(await response.text())"
+    docs: https://docs.urbansky.com/api/javascript.html
+    official: true
+  - language: python
+    registry: cdn
+    name: Urban Sky Python SDK
+    url: https://sdk.atmosys.com/runtime/py/current/loader.py
+    install: "import requests; exec(requests.get('https://sdk.atmosys.com/runtime/py/current/loader.py').text)"
+    docs: https://docs.urbansky.com/api/python.html
+    official: true

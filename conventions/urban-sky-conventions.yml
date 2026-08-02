@@ -1,0 +1,47 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.urbansky.com/
+notes: >-
+  Cross-cutting semantics of the Urban Sky SDK / telemetry surface, captured
+  from the published developer docs (docs.urbansky.com, mirrored at
+  docs.atmosys.com). The surface is SDK- and WebSocket-first; the only
+  documented REST operation is the sandbox test endpoint. No idempotency
+  contract, pagination, versioning policy, or request-id tracing is documented.
+authentication:
+  style: api-key
+  detail: Organization-scoped API token; apiToken in SDK init, x-api-token header on REST
+  artifact: authentication/urban-sky-authentication.yml
+transport:
+  primary: WebSocket (real-time push, no polling)
+  base_url: https://api.ops.atmosys.com
+  sdk_delivery: CDN loader (sdk.atmosys.com/runtime/{js,py}/current/loader.js|.py)
+  versioning_signal: SDK loader path uses a "current" release channel; no API versioning policy documented
+events:
+  registration: sdk.on(event, handler) / sdk.off(event, handler)
+  types:
+    - balloon:update
+    - unassigned:devices
+    - connected
+    - disconnected
+    - connecting
+    - failed
+    - error
+  artifact: asyncapi/urban-sky-telemetry-asyncapi.yml
+error_envelope:
+  sdk: SDKError {code, message, details}
+  rest: NestJS-style {statusCode, timestamp, path, method, message, details}
+  artifact: errors/urban-sky-error-codes.yml
+rate_limits:
+  signaling: RATE_LIMITED SDK error code ("Rate limit exceeded - wait before retrying")
+  published_limits: none documented
+reconnection:
+  behavior: SDK automatically attempts reconnection on CONNECTION_LOST; docs advise not implementing custom reconnection
+idempotency: not documented
+pagination: not documented
+request_tracing: not documented
+timestamps:
+  format: ISO 8601 (device telemetry timestamp field)
+identifiers:
+  balloonId: "e.g. BLN-2024-001"
+  missionId: "e.g. MSN-2024-001"
+  deviceId: "e.g. PLD-001; device types PLD (payload), APX (apex), BLS (ballaster)"

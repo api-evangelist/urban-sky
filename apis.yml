@@ -1,7 +1,29 @@
 aid: urban-sky
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/urban-sky.png
 name: Urban Sky
-description: Urban Sky is a company surfaced as a portfolio company of techstars and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Urban Sky is a Denver-based aerospace company, founded in 2016, that designs
+  and operates reusable stratospheric microballoons for high-altitude remote sensing,
+  persistent aerial surveillance, communications relay, and atmospheric data collection.
+  Its balloons launch in under five minutes, float at 61,000-75,000 feet for multi-day
+  missions, and carry the modular Wallabee payload platform with RGB, VNIR, and LWIR
+  thermal sensors delivering 10cm-resolution imagery with real-time downlink. Through
+  its Atmosys software platform, Urban Sky publishes an SDK for developers (JavaScript
+  and Python, delivered via CDN loader) that streams real-time balloon telemetry over
+  WebSocket and provides mission imagery access, serving defense and intelligence,
+  commercial monitoring, and science and weather markets. Urban Sky is a Techstars
+  portfolio company.
 url: https://raw.githubusercontent.com/api-evangelist/urban-sky/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,11 +32,37 @@ x-backed-by:
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Aerospace
+- Stratospheric Balloons
+- Remote Sensing
+- Earth Observation
+- Aerial Imagery
+- Telemetry
+- Defense
+- Weather
+apis:
+- name: Urban Sky SDK (Real-time Balloon Telemetry)
+  description: Real-time balloon telemetry feed delivered over WebSocket via the
+    Urban Sky SDK (JavaScript and Python, distributed by CDN loader from
+    sdk.atmosys.com), with balloon and unassigned-device location updates, an
+    organization-scoped API-token auth model, a published REST test endpoint for
+    verifying integrations, and advertised mission imagery access with signed URLs.
+  humanURL: https://docs.urbansky.com/
+  baseURL: https://api.ops.atmosys.com
+  tags:
+  - Telemetry
+  - Balloons
+  - Real-Time
+  - WebSocket
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +71,47 @@ maintainers:
 common:
 - type: Website
   url: https://urbansky.com/
+- type: About
+  url: https://urbansky.com/company/about
+- type: Blog
+  url: https://urbansky.com/news
+- type: Careers
+  url: https://urbansky.com/careers
+- type: Contact
+  url: https://urbansky.com/contact
+- type: PrivacyPolicy
+  url: https://urbansky.com/privacy-policy
+- type: TermsOfService
+  url: https://urbansky.com/terms-and-conditions
+- type: LinkedIn
+  url: https://www.linkedin.com/company/urban-sky-strato
+- type: GitHubOrganization
+  url: https://github.com/urban-sky
+- type: DeveloperPortal
+  url: https://docs.urbansky.com/
+- type: Documentation
+  url: https://docs.urbansky.com/
+- type: APIReference
+  url: https://docs.urbansky.com/api/javascript.html
+- type: GettingStarted
+  url: https://docs.urbansky.com/guide/getting-started.html
+- type: Packages
+  url: packages/urban-sky-packages.yml
+- type: SDKs
+  url: packages/urban-sky-packages.yml
+- type: Authentication
+  url: authentication/urban-sky-authentication.yml
+- type: Sandbox
+  url: sandbox/urban-sky-sandbox.yml
+- type: ErrorCatalog
+  url: errors/urban-sky-error-codes.yml
+- type: Conventions
+  url: conventions/urban-sky-conventions.yml
+- type: AsyncAPI
+  url: asyncapi/urban-sky-telemetry-asyncapi.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: LLMsTxt
+  url: llms/urban-sky-llms.txt
+- type: DomainSecurity
+  url: security/urban-sky-domain-security.yml
