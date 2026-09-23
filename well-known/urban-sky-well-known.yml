@@ -2,14 +2,13 @@ generated: '2026-07-21'
 method: searched
 source: https://urbansky.com/
 host: https://urbansky.com
-notes: >-
-  urbansky.com sits behind a WAF that returns 403 for non-existent paths
-  (real pages return 200). No /.well-known/ discovery documents were found.
-  The site does publish /llms.txt (captured verbatim in llms/urban-sky-llms.txt).
-documents:
+notes: urbansky.com sits behind a WAF that returns 403 for non-existent paths (real pages return 200).
+  No /.well-known/ discovery documents were found. The site does publish /llms.txt (captured verbatim
+  in llms/urban-sky-llms.txt).
+hosts:
+- host: https://urbansky.com
+  documents:
   - path: /.well-known/security.txt
-    status: 403
-  - path: /security.txt
     status: 403
   - path: /.well-known/openid-configuration
     status: 403
@@ -19,6 +18,8 @@ documents:
     status: 403
   - path: /.well-known/ai-plugin.json
     status: 403
-  - path: /llms.txt
-    status: 200
-    file: ../llms/urban-sky-llms.txt
+x-shape-fix:
+  converted: '2026-08-20'
+  from: documents
+  note: Rewritten into hosts[] -> documents[], the only shape well_known_docs() in score.rb reads. A served
+    .well-known surface recorded in any other shape scores as absent.
