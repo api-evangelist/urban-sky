@@ -62,6 +62,7 @@ tags:
 - Telemetry
 - Defense
 - Weather
+- Real-Time
 apis:
 - name: Urban Sky SDK (Real-time Balloon Telemetry)
   description: Real-time balloon telemetry feed delivered over WebSocket via the
